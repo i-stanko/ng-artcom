@@ -1,0 +1,41 @@
+.title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products {
+  width: 50%;
+  background-color: aliceblue;
+}
+
+.productInfo {
+  width: 50%;
+}
+
+.infoBlock {
+  display: flex;
+  padding: 10px;
+  background-color: bisque;
+}
+
+.keysBlock,
+.valuesBlock {
+  min-height: 50px;
+  margin-bottom: 5px;
+  padding-right: 30px;
+}
+
+.btn {
+  width: 70px;
+  margin-top: 10px;
+}
+
+.btnClose {
+  display: flex;
+  justify-content: flex-end;
+}

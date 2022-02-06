@@ -3,14 +3,36 @@
 <div class="container">
   <div class="products row">
     <div *ngFor="let product of products" class="col">
-      <button class="btn btn-primary">
+      <button (click)="onClick(product)" class="btn btn-primary">
         {{ product.ProductCode }}
       </button>
     </div>
   </div>
 
-  <div class="productInfo">
-    asasasasa
-  </div>
+  <div *ngIf="visible" class="productInfo">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Key</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <b>key</b>
+          </td>
+          <td>
+            value
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
+    <div class="btnClose">
+      <button (click)="onClickClose()" class="btn btn-danger">
+        Close
+      </button>
+    </div>
+  </div>
 </div>

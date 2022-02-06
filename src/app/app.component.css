@@ -1,5 +1,6 @@
 .title {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -14,10 +15,18 @@
 
 .productInfo {
   width: 50%;
+}
+
+.table {
   background-color: bisque;
 }
 
 .btn {
   width: 70px;
   margin-top: 10px;
+}
+
+.btnClose {
+  display: flex;
+  justify-content: flex-end;
 }

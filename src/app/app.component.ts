@@ -9,6 +9,7 @@ import { ProductService } from './product.service';
 export class AppComponent implements OnInit {
   title = 'Angular Artcom';
   products: any = [];
+  visible: boolean = false;
 
   constructor(private productService: ProductService) { }
 
@@ -16,5 +17,13 @@ export class AppComponent implements OnInit {
     this.productService.getData().subscribe(data => {
       this.products = data;
     })
+  }
+
+  onClick(product: any) {
+    this.visible = true;
+  }
+
+  onClickClose() {
+    this.visible = false;
   }
 }

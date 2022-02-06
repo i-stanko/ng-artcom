@@ -9,7 +9,9 @@ import { ProductService } from './product.service';
 export class AppComponent implements OnInit {
   title = 'Angular Artcom';
   products: any = [];
-  visible: boolean = false;
+  selected: boolean = false;
+  productKeys!: any[];
+  productValues!: any[];
 
   constructor(private productService: ProductService) { }
 
@@ -20,10 +22,12 @@ export class AppComponent implements OnInit {
   }
 
   onClick(product: any) {
-    this.visible = true;
+    this.selected = true;
+    this.productKeys = Object.keys(product);
+    this.productValues = Object.values(product).map(e => e !== null ? e : 'it\'s unknown');
   }
 
   onClickClose() {
-    this.visible = false;
+    this.selected = false;
   }
 }

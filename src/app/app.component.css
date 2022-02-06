@@ -17,8 +17,17 @@
   width: 50%;
 }
 
-.table {
+.infoBlock {
+  display: flex;
+  padding: 10px;
   background-color: bisque;
+}
+
+.keysBlock,
+.valuesBlock {
+  min-height: 50px;
+  margin-bottom: 5px;
+  padding-right: 30px;
 }
 
 .btn {

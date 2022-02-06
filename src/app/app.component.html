@@ -9,26 +9,19 @@
     </div>
   </div>
 
-  <div *ngIf="visible" class="productInfo">
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Key</th>
-          <th scope="col">Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <b>key</b>
-          </td>
-          <td>
-            value
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
+  <div *ngIf="selected" class="productInfo">
+    <div class="infoBlock">
+      <div>
+        <div *ngFor="let key of productKeys" class="keysBlock">
+          <b>{{ key }}:</b>
+        </div>
+      </div>
+      <div>
+        <div *ngFor="let value of productValues" class="valuesBlock">
+          {{ value }}
+        </div>
+      </div>
+    </div>
     <div class="btnClose">
       <button (click)="onClickClose()" class="btn btn-danger">
         Close

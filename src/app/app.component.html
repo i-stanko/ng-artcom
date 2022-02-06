@@ -1,7 +1,16 @@
 <h1 class="title">{{ title }}</h1>
 
-<ul>
-  <li *ngFor="let product of products">
-    {{ product.ProductCode }}
-  </li>
-</ul>
+<div class="container">
+  <div class="products row">
+    <div *ngFor="let product of products" class="col">
+      <button class="btn btn-primary">
+        {{ product.ProductCode }}
+      </button>
+    </div>
+  </div>
+
+  <div class="productInfo">
+    asasasasa
+  </div>
+
+</div>
